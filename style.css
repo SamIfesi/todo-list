@@ -72,7 +72,6 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 1em;
-  overflow-y: auto;
 
   background: var(--panel-bg);
   width: 20em;
