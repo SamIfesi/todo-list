@@ -24,6 +24,7 @@
 main,
 .switch,
 .container,
+.input-container,
 ul li img {
   transition: all 1.75s ease;
 }
