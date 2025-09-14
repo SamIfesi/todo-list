@@ -20,20 +20,19 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Outfit";
-  transition: all 1.75s ease;
 }
-/* main,
+main,
 .switch,
 .container,
 ul li img {
   transition: all 1.75s ease;
-} */
+}
 main {
   background: var(--bg-primary);
   color: var(--gray-lighter);
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   height: 100vh;
 }
