@@ -33,7 +33,7 @@ main {
   color: var(--gray-lighter);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   height: 100vh;
 }
@@ -103,10 +103,14 @@ input {
   background: transparent;
   color: var(--gray-lighter);
 }
-.input-container img {
+.input-container .btn {
+  border: none;
+  background: none;
   position: absolute;
-  top: 0;
-  right: 2px;
+  top: 3px;
+  right: 3px;
+}
+.input-container img {
   border: none;
   height: 2.3em;
   width: 2.3em;

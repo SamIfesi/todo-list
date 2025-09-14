@@ -22,6 +22,7 @@ switchBtn.addEventListener("click", () => {
 
 // ACTIONS OF TO-DO LIST STARTS HERE
 add.addEventListener("click", (e) => {
+  e.preventDefault()
   const getValues = input.value.trim();
   if (getValues === "") {
     return;
