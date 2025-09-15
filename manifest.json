@@ -1,0 +1,22 @@
+{
+  "name": "Sam-Todo App",
+  "short_name": "Sam Todos",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#333",
+  "description": "simple todo list app",
+  "icons": [
+    {
+      "src": "/assets/appicon.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/appIcon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

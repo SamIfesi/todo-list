@@ -3,7 +3,6 @@ const add = document.querySelector(".btn");
 const list = document.querySelector("ul");
 const switchBtn = document.querySelector(".switch");
 
-
 // THEME MODE SWITCHING STARTS HERE
 let modeCheck = document.body.classList;
 let getMode = localStorage.getItem("mode");
@@ -22,7 +21,7 @@ switchBtn.addEventListener("click", () => {
 
 // ACTIONS OF TO-DO LIST STARTS HERE
 add.addEventListener("click", (e) => {
-  e.preventDefault()
+  e.preventDefault();
   const getValues = input.value.trim();
   if (getValues === "") {
     return;
@@ -31,11 +30,10 @@ add.addEventListener("click", (e) => {
   list.appendChild(listItem);
   listItem.textContent = getValues;
 
-
   //   let span = document.createElement("span");
   // span.innerHTML = "&#x274C";
   // listItem.appendChild(span);
-  
+
   // ADDITION OF IMG (FOR REMOVING LIST ITEMS)
   let img = document.createElement("img");
   img.src = "./assets/close-40.png";
@@ -45,7 +43,7 @@ add.addEventListener("click", (e) => {
   saveData();
 });
 
-// FOR REMOVING THE ITEMS FROM THE LIST 
+// FOR REMOVING THE ITEMS FROM THE LIST
 list.addEventListener(
   "click",
   (e) => {
@@ -60,7 +58,7 @@ list.addEventListener(
   false
 );
 
-// SAVING THE TO DO LIST IN LOCALSTORAGE 
+// SAVING THE TO DO LIST IN LOCALSTORAGE
 function saveData() {
   localStorage.setItem("data", list.innerHTML);
 }
@@ -68,3 +66,19 @@ function showData() {
   list.innerHTML = localStorage.getItem("data");
 }
 showData();
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then((registration) => {
+        console.log(
+          "Service worker registered with scope:",
+          registration.scope
+        );
+      })
+      .catch((error) => {
+        console.log("Service Worker registration failed:", error);
+      });
+  });
+}
