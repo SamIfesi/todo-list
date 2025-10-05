@@ -30,9 +30,6 @@ add.addEventListener("click", (e) => {
   list.appendChild(listItem);
   listItem.textContent = getValues;
 
-  //   let span = document.createElement("span");
-  // span.innerHTML = "&#x274C";
-  // listItem.appendChild(span);
 
   // ADDITION OF IMG (FOR REMOVING LIST ITEMS)
   let img = document.createElement("img");
